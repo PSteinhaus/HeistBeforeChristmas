@@ -2,11 +2,10 @@ package xmas_heist.items;
 
 import xmas_heist.GameState;
 
-public class SantaCoat extends SantaOutfit {
-
+public class SantaTrousers extends SantaOutfit {
     @Override
     public String name() {
-        return "ein roter Mantel";
+        return "eine flauschige rote Hose";
     }
 
     @Override

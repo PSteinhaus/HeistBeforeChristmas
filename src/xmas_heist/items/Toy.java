@@ -2,15 +2,14 @@ package xmas_heist.items;
 
 import xmas_heist.GameState;
 
-public class SantaCoat extends SantaOutfit {
-
+public class Toy implements Item {
     @Override
     public String name() {
-        return "ein roter Mantel";
+        return "ein Spielzeug";
     }
 
     @Override
     public void use(GameState state) {
-        state.getSanta().putOn(this);
+        // not useable; do nothing
     }
 }

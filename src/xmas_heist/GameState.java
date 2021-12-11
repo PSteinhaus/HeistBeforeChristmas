@@ -10,12 +10,14 @@ public class GameState {
     private boolean gameRunning;
     private Scene currentScene;
     private Scanner scanner;
+    private int presentsShared;
 
     public GameState() {
         santa = new SantaClaus();
         gameRunning = true;
         currentScene = new Warehouse();
         scanner = new Scanner(System.in);
+        presentsShared = 0;
     }
 
     public void run() {
@@ -29,6 +31,7 @@ public class GameState {
             Scene sceneToSwitchTo = currentScene.requestedTransition();
             if (sceneToSwitchTo != null)
                 currentScene = sceneToSwitchTo;
+            System.out.println(); // print an empty line to separate turns
         }
     }
 
@@ -39,4 +42,10 @@ public class GameState {
      * stops the game by setting the game loop flag to false
      */
     public void stopGame() { gameRunning = false; }
+
+    public void addPresentsShared(int presentCount) {
+        presentsShared += presentCount;
+    }
+
+    public int getPresentsShared() { return presentsShared; }
 }
