@@ -1,9 +1,6 @@
 package xmas_heist;
 
-import xmas_heist.items.SantaCoat;
-import xmas_heist.items.SantaHat;
-import xmas_heist.items.SantaOutfit;
-import xmas_heist.items.SantaTrousers;
+import xmas_heist.items.*;
 
 /**
  * Santa Claus, the main character of the game, controlled by the player.
@@ -25,13 +22,13 @@ public class SantaClaus {
      * @return
      * returns the lost piece
      */
-    public SantaOutfit loseOutfit() {
+    public Item loseOutfit() {
         // first check if you're already stripped
         // if you are then nothing more can be lost, so return 'null'
         if (isStripped())
             return null;
 
-        SantaOutfit lostOutfit = null;
+        Item lostOutfit = null;
         do {
             double roll = Math.random();
             if (roll < 0.33) {

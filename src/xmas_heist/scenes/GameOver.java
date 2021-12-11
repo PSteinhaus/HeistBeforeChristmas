@@ -13,8 +13,7 @@ public class GameOver implements Scene {
 
     @Override
     public boolean awaitAndHandleChoice(GameState currentState) {
-        // whatever the user gives as input we just stop the game
-        currentState.getChoice();
+        // just stop the game
         currentState.stopGame();
         return true;
     }

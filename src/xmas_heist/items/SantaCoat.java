@@ -2,7 +2,7 @@ package xmas_heist.items;
 
 import xmas_heist.GameState;
 
-public class SantaCoat extends SantaOutfit {
+public class SantaCoat implements Item {
 
     @Override
     public String name() {
