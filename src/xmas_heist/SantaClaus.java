@@ -5,4 +5,6 @@ package xmas_heist;
  */
 public class SantaClaus {
     private Bag bag = new Bag();
+
+    public Bag getBag() { return bag; }
 }
