@@ -238,7 +238,6 @@ public class Warehouse implements Scene {
             // let the mean number of available presents rise polynomially with the following exponent:
             final double PRESENT_GROWTH_RATE = 1.3;
             int availablePresents = (int)(Math.random() * Math.pow(level * 2.0, PRESENT_GROWTH_RATE));
-            System.out.println("AVAILABLE: "+availablePresents);
             presentsAvailable.add(availablePresents);
         }
         if (ownState == SceneState.NOT_ALONE) {
